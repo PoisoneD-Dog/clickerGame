@@ -3,22 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    
+    <title>Clicker Factory</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="clickme">clickme</button>
+    <div class="game-screen">
+      <div class="score-container">
+        <img src="Assets/Btn/meet.png" alt="meat" class="score-icon" />
+        <span id="scoreDisplay" class="score-text">0</span>
+      </div>
 
-    <h1 id="scoreDisplay" >Score: 0</h1>
+      <div class="button-bar">
+        <button class="boton-ui" id="clickme">
+          <img src="Assets/Btn/moledora1.png" class="btn-img" alt="" />
+        </button>
 
-    <button id="powerUp1">Power Up 10</button>
+        <button class="boton-ui" id="powerUp1">
+          <img src="Assets/Btn/+1.png" class="btn-img" alt="" />
+        </button>
 
-    <button id="autoPower">autoPower +1 x 50</button>
-
-
-
+        <button class="boton-ui" id="autoPower">
+          <img src="Assets/Btn/AutoPower.png" class="btn-img" alt="" />
+        </button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
