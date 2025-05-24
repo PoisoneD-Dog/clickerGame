@@ -9,7 +9,7 @@ body {
 .game-screen {
   background-image: url("Assets/Enverioment/floor.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   image-rendering: pixelated;
   width: 100vw;
@@ -98,22 +98,24 @@ button:hover .btn-img {
   }
 }
 
-@media (min-width: 601px) {
-  .boton-ui {
-    top: 0;
-    left: -300px;
-    flex-direction: column;
-  }
-  .btn-img {
-    width: 80px;
-  }
-
+@media (orientation: landscape) and (min-width: 600px) {
   .button-bar {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: auto;
+    padding: 0;
   }
 
-  .score-container {
-    top: 10px;
-    transform: translateX(-50%);
+  .boton-ui {
+    position: static;
+  }
+
+  .btn-img {
+    width: 70px;
   }
 }
