@@ -37,15 +37,22 @@ setInterval(function () {
 function updateMeatSprite(score) {
   const meat = document.getElementById("meatMountain");
 
+  let scale = 1;
   if (score >= 20) {
+    scale = 4;
     meat.src = "Assets/Enverioment/mountainMeat (4).png";
   } else if (score >= 10) {
+    scale = 3;
     meat.src = "Assets/Enverioment/mountainMeat (3).png";
   } else if (score >= 2) {
+    scale = 2;
     meat.src = "Assets/Enverioment/mountainMeat (2).png";
   } else {
+    scale = 1;
     meat.src = "Assets/Enverioment/mountainMeat (1).png";
   }
+    meat.style.transform = `scale(${scale})`;
+
 }
 
 
